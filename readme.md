@@ -36,7 +36,7 @@
 - terraform apply 
 
 # EKS config setup to validate our EKS cluster setup 
-- aws eks update-kubeconfig --name getting-started-eks --region us-east-2 
+- aws eks update-kubeconfig --name getting-started-eks --region us-east-1 
 
 # Get kubectl z
 - curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
