@@ -4,7 +4,7 @@
 # Install docker
 
 # Run Amazon CLI
-- docker run -it --rm -v ${​​​​​​PWD}​​​​​​:/work -w /work --entrypoint /bin/sh amazon/aws-cli:2.0.43 
+- docker run -it --rm -v ${PWD}:/work -w /work --entrypoint /bin/sh amazon/aws-cli:2.0.43 
 
 # Tools required for terraform unzip
 - yum install -y gzip tar unzip wget
@@ -17,7 +17,7 @@
 ## S3 bucket created with name terraform-demo-eks
 - aws s3api create-bucket --bucket terraform-demo-eks --region us-east-1
 
-## dynamodb table created with Primary key as "LockID"  Amazon CLI container setup to execute terraform
+## dynamodb table created with Primary key as 'LockID' Amazon CLI container setup to execute terraform
 - aws dynamodb create-table --table-name terraformstate --attribute-definitions AttributeName=LockID,AttributeType=S --key-schema AttributeName=LockID,KeyType=HASH --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
 
 # Terraform CLI setup
@@ -28,7 +28,7 @@
 
 
 # Copy the extracted folder from zip to present working directory under work folder 
-- cd <into code directory under users work folder> 
+- cd "into code directory under users work folder"
 
 # Create infrastructure on aws
 - terraform init
